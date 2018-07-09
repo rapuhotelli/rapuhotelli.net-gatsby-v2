@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import Bio from '../components/Bio'
 import Header from '../components/Header'
 
 import Layout from '../components/layout'
@@ -11,6 +10,7 @@ import { rhythm } from '../utils/typography'
 
 class BlogIndex extends React.Component {
   render() {
+    console.log(this.props)
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
