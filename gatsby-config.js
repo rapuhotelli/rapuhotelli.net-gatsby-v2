@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
-    author: 'Kyle Mathews',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    title: 'rapuhotelli',
+    author: 'rapuhotelli',
+    description: 'a strange diary and some stories for another time',
+    siteUrl: 'rapuhotelli.net',
   },
   pathPrefix: '/gatsby-starter-blog',
   plugins: [
@@ -12,6 +12,15 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Quattrocento Sans`,
+          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+        ],
       },
     },
     {

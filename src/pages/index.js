@@ -2,40 +2,22 @@ import React from 'react'
 import { Link } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-
-import Header from '../components/Header'
-
+import BlogPost from '../templates/blog-post'
 import Layout from '../components/layout'
 import { rhythm } from '../utils/typography'
+import { colors } from '../utils/constants'
 
 class BlogIndex extends React.Component {
   render() {
-    console.log(this.props)
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
-
+    //const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    //const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const data = get(this, 'props.data')
     return (
-      <Layout location={this.props.location}>
-        <Helmet title={siteTitle} />
-        <Header />
-        {posts.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          )
-        })}
+      <Layout>
+        <h2 style={{ borderBottom: `5px solid ${colors.orange}` }}>
+          Latest post
+        </h2>
+        <BlogPost {...data} />
       </Layout>
     )
   }
@@ -50,17 +32,21 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      limit: 1
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
-          excerpt
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            series
+          }
           fields {
             slug
           }
-          frontmatter {
-            date(formatString: "DD MMMM, YYYY")
-            title
-          }
+          html
         }
       }
     }

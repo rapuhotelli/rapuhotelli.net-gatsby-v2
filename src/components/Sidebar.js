@@ -1,13 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import get from 'lodash/get'
 import styled from 'styled-components'
 
 import ArchiveItem from './ArchiveItem'
-
-// Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
 
 import { rhythm } from '../utils/typography'
 import { colors } from '../utils/constants'
@@ -89,37 +85,56 @@ const navListStyles = {
 }
 
 /*
-          series={series}
-          layout={this.state.layout}
-          posts={posts}
-          currentPost={currentSlug}
+  series={series}
+  layout={this.state.layout}
+  posts={posts}
+  currentPost={currentSlug}
 */
-/*
-const derp = ({ children }) => (
+
+export default ({ children }) => (
   <StaticQuery
     query={graphql`
-      query LayoutQuery {
+      query SidebarQuery {
         site {
           siteMetadata {
             title
           }
         }
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+          series: distinct(field: frontmatter___series)
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                date(formatString: "DD MMMM, YYYY")
+                title
+                series
+              }
+            }
+          }
+        }
       }
     `}
-    render={data => {}}
+    render={data => {
+      const posts = get(data, 'allMarkdownRemark.edges', [])
+      const series = get(data, 'allMarkdownRemark.series', [])
+      return <Sidebar posts={posts} series={series} />
+    }}
   />
 )
-*/
+/* */
 class Sidebar extends React.Component {
   constructor(props) {
     super(props)
     this.props = props
     this.postsPerPage = 3
-    ;(this.filter = 'all'), (this.filteredPosts = this.props.posts)
+    this.filteredPosts = this.props.posts
     //this.lastPage = Math.ceil(this.filteredPosts.length / this.postsPerPage) - 1
     this.state = {
       currentPage: 0,
-      filter: 'all',
+      filter: 'web',
     }
     this.nextPage = this.nextPage.bind(this)
     this.prevPage = this.prevPage.bind(this)
@@ -134,17 +149,13 @@ class Sidebar extends React.Component {
   }
 
   getFilteredPosts() {
-    /*
     if (this.state.filter === 'all') return this.props.posts
     return this.props.posts.filter(post =>
       post.node.frontmatter.series.includes(this.state.filter)
     )
-    */
-    return []
   }
 
   lastPage() {
-    //console.log(this.filterPosts(this.state.filter));
     const lastPage =
       Math.ceil(this.getFilteredPosts().length / this.postsPerPage) - 1
     return lastPage
@@ -186,7 +197,7 @@ class Sidebar extends React.Component {
     }
   }
   render() {
-    const { series = [] } = this.props
+    const { series } = this.props
     return (
       <StyledSidebar>
         <div className="archive-header">
@@ -228,7 +239,7 @@ class Sidebar extends React.Component {
   }
 }
 
-export default Sidebar
+// export default Sidebar
 
 /*
                   (this.props.currentSlug !== node.fields.slug) 

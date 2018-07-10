@@ -1,8 +1,5 @@
 import React from 'react'
 import { StaticQuery, Link } from 'gatsby'
-// Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
 
 import { colors } from '../utils/constants'
 /*
@@ -70,12 +67,12 @@ export default ({ children }) => (
         site {
           siteMetadata {
             title
+            description
           }
         }
       }
     `}
     render={data => {
-      console.log(data)
       return (
         <div
           style={{
