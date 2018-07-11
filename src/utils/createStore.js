@@ -1,25 +1,15 @@
-import { createStore as reduxCreateStore } from "redux"
+import { createStore as reduxCreateStore } from 'redux'
+import reducers from './reducers'
 
-function reducer(state = initialState, action) {
-  switch (action.type) {
-    case 'OPEN_MODAL':
-      return {
-        ...state,
-        modalContent: action.obj
-      };
-    case 'CLOSE_MODAL':
-      return {
-        ...state,
-        modalContent: null
-      };
-    default:
-      return state;
-  }
+const initialState = {
+  modal: null,
+  filter: 'all',
 }
 
-
-
-const initialState = { modalContent: null };
-
-const createStore = () => reduxCreateStore(reducer, initialState)
+const createStore = () =>
+  reduxCreateStore(
+    reducers,
+    initialState,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
 export default createStore

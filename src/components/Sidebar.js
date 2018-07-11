@@ -1,12 +1,14 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import get from 'lodash/get'
 import styled from 'styled-components'
 
 import ArchiveItem from './ArchiveItem'
-
 import { rhythm } from '../utils/typography'
 import { colors } from '../utils/constants'
+
+import { setFilter } from '../utils/actions'
 
 const StyledSidebar = styled.div`
   grid-area: side;
@@ -120,26 +122,92 @@ export default ({ children }) => (
     render={data => {
       const posts = get(data, 'allMarkdownRemark.edges', [])
       const series = get(data, 'allMarkdownRemark.series', [])
-      return <Sidebar posts={posts} series={series} />
+      return <ConnectedSidebar posts={posts} series={series} />
     }}
   />
 )
-/* */
+/**
+ * postsPerPage unused
+ */
 class Sidebar extends React.Component {
   constructor(props) {
     super(props)
+    console.log(props)
     this.props = props
-    this.postsPerPage = 3
-    this.filteredPosts = this.props.posts
-    //this.lastPage = Math.ceil(this.filteredPosts.length / this.postsPerPage) - 1
-    this.state = {
-      currentPage: 0,
-      filter: 'web',
+  }
+
+  getFilteredPosts() {
+    if (this.props.filter === 'all') return this.props.posts
+    return this.props.posts.filter(post =>
+      post.node.frontmatter.series.includes(this.props.filter)
+    )
+  }
+
+  setFilter(filter) {
+    this.props.dispatch(setFilter(filter))
+  }
+
+  render() {
+    const { series } = this.props
+    return (
+      <StyledSidebar>
+        <div className="archive-header">
+          <h2>Archive</h2>
+        </div>
+        <div className="series-select">
+          <h4>Filter by series</h4>
+          <div className="serie-container">
+            <span
+              className={this.props.filter === 'all' ? 'active' : ''}
+              onClick={() => this.setFilter('all')}
+            >
+              ALL
+            </span>
+          </div>
+          {series.map((serie, i) => {
+            return (
+              <div key={serie} className="serie-container">
+                {', '}
+                <span
+                  className={this.props.filter === serie ? 'active' : ''}
+                  onClick={() => this.setFilter(serie)}
+                >
+                  {serie}
+                </span>
+              </div>
+            )
+          })}
+        </div>
+
+        <ul>
+          {this.getFilteredPosts().map(({ node }) => (
+            <ArchiveItem key={node.fields.slug} node={node} />
+          ))}
+        </ul>
+      </StyledSidebar>
+    )
+  }
+}
+
+const ConnectedSidebar = connect(
+  function mapStateToProps(state) {
+    return state
+  },
+  function mapDispatchToProps(dispatch) {
+    return {
+      dispatch,
     }
+  }
+)(Sidebar)
+
+// Graveyard / todo
+/*
+    this.postsPerPage = 3
+
     this.nextPage = this.nextPage.bind(this)
     this.prevPage = this.prevPage.bind(this)
-    //this.filteredPosts = this.filterPosts('web');
-  }
+
+  //this.getPostsRange().map(({ node }) => <ArchiveItem key={node.fields.slug} node={node} />)
 
   filterPosts(filter) {
     if (filter === 'all') return this.props.posts
@@ -147,30 +215,15 @@ class Sidebar extends React.Component {
       post.node.frontmatter.series.includes(filter)
     )
   }
-
-  getFilteredPosts() {
-    if (this.state.filter === 'all') return this.props.posts
-    return this.props.posts.filter(post =>
-      post.node.frontmatter.series.includes(this.state.filter)
-    )
+  getPostsRange(pageId) {
+    const start = this.state.currentPage * this.postsPerPage
+    return this.getFilteredPosts().slice(start, start + this.postsPerPage)
   }
 
   lastPage() {
     const lastPage =
       Math.ceil(this.getFilteredPosts().length / this.postsPerPage) - 1
     return lastPage
-  }
-
-  getPostsRange(pageId) {
-    const start = this.state.currentPage * this.postsPerPage
-    return this.getFilteredPosts().slice(start, start + this.postsPerPage)
-  }
-
-  setFilter(filter) {
-    this.setState({
-      filter: filter,
-      currentPage: 0,
-    })
   }
 
   nextPage() {
@@ -196,51 +249,7 @@ class Sidebar extends React.Component {
       })
     }
   }
-  render() {
-    const { series } = this.props
-    return (
-      <StyledSidebar>
-        <div className="archive-header">
-          <h2>Archive</h2>
-        </div>
-        <div className="series-select">
-          <h4>Filter by series</h4>
-          <div className="serie-container">
-            <span
-              className={this.state.filter === 'all' ? 'active' : ''}
-              onClick={() => this.setFilter('all')}
-            >
-              ALL
-            </span>
-          </div>
-          {series.map((serie, i) => {
-            return (
-              <div key={serie} className="serie-container">
-                {', '}
-                <span
-                  className={this.state.filter === serie ? 'active' : ''}
-                  onClick={() => this.setFilter(serie)}
-                >
-                  {serie}
-                </span>
-              </div>
-            )
-          })}
-        </div>
-
-        <ul>
-          {//this.getPostsRange().map(({ node }) => <ArchiveItem key={node.fields.slug} node={node} />)
-          this.getFilteredPosts().map(({ node }) => (
-            <ArchiveItem key={node.fields.slug} node={node} />
-          ))}
-        </ul>
-      </StyledSidebar>
-    )
-  }
-}
-
-// export default Sidebar
-
+*/
 /*
                   (this.props.currentSlug !== node.fields.slug) 
                   ? (<Link style={{ boxShadow: 'none', fontSize: '14px'}} to={node.fields.slug}>
