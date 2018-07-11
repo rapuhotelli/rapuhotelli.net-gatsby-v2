@@ -4,7 +4,7 @@ import get from 'lodash/get'
 
 import rehypeReact from 'rehype-react'
 import InlineImage from '../components/inline/InlineImage'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 import { rhythm, scale } from '../utils/typography'
 import { colors } from '../utils/constants'

@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import BlogPost from '../templates/blog-post'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
 import { colors } from '../utils/constants'
 
