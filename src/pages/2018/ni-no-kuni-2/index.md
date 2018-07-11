@@ -14,10 +14,10 @@ The sequel's market was shifted further towards a western audience, but stayed i
 
 Before I embark on my adventure of curious observations, needless to say this post will **SPOIL the entire story of the game**. If you're not into action-adventure role-playing games, read on and enjoy a hearty guffaw. But if there's a chance that you, dear reader, might enjoy the game, google it up first and see if makes you feel fuzzy inside (and have 40 hours to spend). If so, buy it and enjoy it with a pair of blue eyes.
 
-<inline-image>
+<figure>
     <img src="./20180408002129_1.jpg">
     <figcaption>Genocide, am I right?!!</figcaption>
-</inline-image>
+</figure>
 
 ## It's pre-emptive self-defense, not murder
 
@@ -27,10 +27,10 @@ The game's designers said in an interview that this time around they wanted to i
 
 The game begins and immediately things turn sour. The main antagonist Mausinger – the king's advisor – is introduced. Mausinger stages a coup and a lot of people get killed. Evan needs to stop boohoo-ing that all his friends are dead to create a new kingdom where everyone can live _happily ever after_. Roland the experienced statesman to the rescue! The game hasn't even properly begun when the player is introduced to the theme of the game: the prime evil, racism. For some reason, most of the world's nations' leaders have been infected by an evil force which causes their behavior to change, typically towards hatefulness and selfishness.
 
-<inline-image>
+<figure>
     <img src="./rats.jpg">
     <figcaption>Who let you out of the gulag?</figcaption>
-</inline-image>
+</figure>
 
 This isn't very uncommon, though. Throughout history a lot of fairy tales, Disney films and others have had a similar theme: social classes and races of citizens were portrayed by various animal species and the species were clearly animated in such a way that it was obvious who the good and bad guys were. What **was** surprising how direct the game was with the subject. The way it was presented felt very... topical. The message was pretty clear: in spite of Evan's moronic optimism, weak self-help quotes like _"justice always prevails"_ are false, and violence dictates the destiny of Ni no Kuni, just as it does in the real world. Roland and Evan must learn to swing a sword and the _action role-playing game_ genre has once again justified itself. Let's go!
 
@@ -38,10 +38,10 @@ This isn't very uncommon, though. Throughout history a lot of fairy tales, Disne
 
 Searching for answers and allies, Evan and Roland eventually arrive at the superstitious nation of Goldpaw, the country of the dogfolk. The dogs are completely insane: any state affair must involve a divine intervention. The dogs have a divine statue which is able to roll a die. The roll of the divine die decides everything from tax rates to criminal court hearings. All the dogs are in on it and believe fully in the justice of the die. Questioning the sanity of the divine die makes the dogs suspicious of the open-minded young king's adventurous troupe. Sound familiar?
 
-<inline-image>
+<figure>
     <img src="./funluck.jpg">
     <figcaption>Outsourcing responsibility to imaginary things! Never heard that before.</figcaption>
-</inline-image>
+</figure>
 
 
 It gets better: the dogs have a charismatic leader, obviously! A priest-like ugly pug who presents himself as a humble servant of the dice roll. It's obvious to the player that it's just a mechanism to control the sheep, but the leader, as it turns out, wasn't entirely to blame here. He was forced into it, like a cornered politician. Pretty meta! The dogs built giant factories which manufacture fake dice with built-in mechanisms for the country's casinos and offices to manipulate everything. Again, a quite scoobydooesque plot but something in its design stamped a giant Cheshire grin on my face. I was liking the game immensely. God bless our freedom to believe what we choose to believe.
@@ -52,10 +52,10 @@ Evan and pals rid Goldpaw of this cancer and suddenly many of the citizens gain 
 
 This was such a great feature I'm frankly quite stunned why stuff like this doesn't play a part in games and films more often. Social media is not a phenomenon anymore – it's a normal part of our daily lives. I think the lack of social media in entertainment in general is partly due to its non-ambiguity: social media is tied to a product or brand, such as Facebook or Twitter. In order to use social media, you have to call it by name. Using an existing product would make you endorse it. Coming up with a new one would cause the audience not to recognize it. Cities: Skylines, the Simcity-done-right, had its Chirper. Chirper's purpose was to send "tweets" to the player to inform the player of citizens' daily woes and other topical things. It worked fantastically, although eventually the tweets started to repeat themselves as they were just hard coded messages based on triggered events. Machine learning experts: the video game industry needs you!
 
-<inline-image>
+<figure>
     <img src="./leafbook.jpg">
     <figcaption>Check out these selfies bruh.</figcaption>
-</inline-image>
+</figure>
 
 Ni no Kuni 2 has Leafbook – an amalgamation of Facebook and Twitter where every post is an image with a caption. New posts appear systematically as the player progresses through the story. Non-player characters the player might have already met also comment on the images, gossiping and providing other details. The player is not able to post anything, but browsing posts gives the player hints on possible secrets and characters to recruit to Evan's kingdom. It's fairly passive and completely unnecessary for beating the game, but it's a fun and intuitive detail and offers treasure hunting players extra activities.
 
@@ -63,10 +63,10 @@ Ni no Kuni 2 has Leafbook – an amalgamation of Facebook and Twitter where ever
 
 Next stop on our adventure to societal failures is ideologically a bit further away but alive and well nonetheless. Turns out the fish people, merfolk, are ruled by fear. Fleeing their country is really difficult, outsiders are greeted by a military escort and the tyrant queen has decreed a bunch of ridiculous laws known as the Four Pillars. The Four Pillars forbid some obvious things, such as being sick and falling in love. The queen herself is a bit of a recluse – she hasn't shown herself to her subjects in years. This would have a _very_ strong smell of classic Disney if it weren't for the queen herself, who happens to be a bit of a "lick my foot" type of dominating weirdo. The loved queen isn't even merfolk, but human! I'm pretty sure I've heard of this place before, but I can't quite put my finger on it.
 
-<inline-image>
+<figure>
     <img src="./forbiddenlove.jpg">
     <figcaption>The Zora in Breath of the Wild had more fashion sense than these guys.</figcaption>
-</inline-image>
+</figure>
 
 The locals are fairly primitive and live in large ruined ancient Greek type of rickety structures and their ruler expresses her love in a quite indirect, inconspicuous way by observing the actions of citizens with a _huge_ eyeball tower (think Sauron's eye) which is able to detect every single action you make. Pleasant. Plot twist: in the end it was just the queen making sure the country is safe, because reasons. Again Evan & co save the day and a bunch of people want to move over to his country.
 
@@ -80,10 +80,10 @@ After a lot of weird encounters with the citizens of the world, it's time to go 
 
 Evan and friends walk around town trying to learn the whereabouts of the grimalkin. Turns out they've been driven to the sewers, like unwanted immigrants. In disguise Evan talks to citizens of this new nation and learns the cold truth: _his old kingdom was an apartheid_, and he as the sheltered prince wasn't told about it. The mice are _free_ from centuries of oppression.
 
-<inline-image>
+<figure>
     <img src="./20180407175613_1.jpg">
     <figcaption>Lesson in politics: our happiness is not your happiness.</figcaption>
-</inline-image>
+</figure>
 
 The mice are happy! They are happy that they feel empowered. They are happy that they have a common enemy which they just recently beat. They revel in the intoxicating feeling of superiority... except the ones who were servants and allies of the murdered court.
 
@@ -97,10 +97,10 @@ Anybody order a needless missile strike lately?
 
 Evan had himself been doing these things all the time along the way, not quite understanding what it meant. I would have loved to hear Roland's comments on the state of things, him being an actual president and all. Oh, and one thing I forgot to mention: in the first 15 seconds of the game, in the game's opening cutscene, Roland's home country is destroyed in a nuclear strike. Let's fucking go.
 
-<inline-image>
+<figure>
     <img src="./20180407175555_1.jpg">
     <figcaption>I think the question was: "Could I make the kingdom great again?"</figcaption>
-</inline-image>
+</figure>
 
 ## I lied
 If you read this and _have_ played the game, you're probably wondering what the hell am I raving on about. These are really the main events of the story, excluding the final chapters. However, I left a critical piece out: what was it that caused the world's nations to go crazy like they did? This little detail kind of undoes most of what I just told. That detail is irrelevant, but it acts as a reality check. I remember as a child these stories were everywhere: something bad happens but then its always undone by cringy bullshit which would _never_ happen in real life, so why were these stories told? To raise stupider citizens? Without this unnamed cartoony antagonist the game would basically be a horror game. If it wasn't for this little detail, the shiny-ass Ghibli art style, and the protagonists' sanity-defying naive optimism, most of the game's script could just as well be written by Nietzsche.
@@ -109,8 +109,8 @@ But what if! What if our world is plagued by a similar insanity and it can all b
 
 What do you think? If our world could change one thing which would fix everything, what would it be?
 
-<inline-image>
+<figure>
     <img src="./20180407175345_1.jpg">
     <figcaption>Are you sure? We have a lot of leaders in here Roland's world who could take that advice – politics aside.</figcaption>
-</inline-image>
+</figure>
 

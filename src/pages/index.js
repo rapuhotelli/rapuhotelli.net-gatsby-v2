@@ -17,7 +17,7 @@ class BlogIndex extends React.Component {
         <h2 style={{ borderBottom: `5px solid ${colors.orange}` }}>
           Latest post
         </h2>
-        <BlogPost {...data} />
+        <BlogPost {...data} isFrontPage />
       </Layout>
     )
   }

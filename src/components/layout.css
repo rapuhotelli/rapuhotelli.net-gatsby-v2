@@ -11,3 +11,21 @@ body {
   }
 }
 
+figure {
+  margin-bottom: 1.45rem;
+  padding: 1rem;
+  border: 1px solid #c4c4c4;
+}
+
+@media (max-width: 800px) {
+  figure {
+    padding: 0;
+    border: 0;
+  }
+}
+figcaption {
+  font-style: italic;
+  color: #e64946;
+  text-align: center;
+  padding-top: 1rem;
+}

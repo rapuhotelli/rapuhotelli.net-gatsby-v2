@@ -5,7 +5,7 @@ module.exports = {
     description: 'a strange diary and some stories for another time',
     siteUrl: 'rapuhotelli.net',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -52,7 +52,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `GTM-T2FWSDQ`,
       },
     },
     `gatsby-plugin-feed`,
