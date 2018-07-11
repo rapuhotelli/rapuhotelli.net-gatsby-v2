@@ -1,17 +1,18 @@
 ---
 date: 2017-04-16T18:45:31+03:00
 description: ""
-series: ["web", "english"]
+series: ["dev", "english"]
 thumbnail: ""
 title: "Development for what"
 ---
 
-I watched Ryan Dahl's presentation on Node.js back then. A friend linked it to me and said it was gonna be big. I understood it was going to be big, just not how big it would become. Every developer has their own take on this story and this is mine. 
+I watched Ryan Dahl's presentation on Node.js back then. A friend linked it to me and said it was gonna be big. I understood it was going to be big, just not how big it would become. Every developer has their own take on this story and this is mine.
+
 <!--more-->
 
 Back in the 2000s web development was... different, but also much _much_ simpler to learn. There was a lot of hype on Ruby, which campaigned against PHP as being more hip. MVC frameworks were cool as fuck. They are still cool to me. I like OOP quite much. I'm an engineer by heart and OOP is very easy to understand and develop. Ofcourse, these days I know that for larger projects with multiple developers OOP easily becomes a giant clusterfuck, but that is a story for another time.
 
-The whole development world and ecosystem were very academic - it was just programming. You always used the tools and libraries that were carefully crafted and stable. When it came to things that had the slightest risk of misusing something, it was always clearly emphasized how to not make an insecure thing. At best people linked to academic papers on input validation and even how to structure HTML properly in a best effort prevent browser parsing bugs or JavaScript bugs. 
+The whole development world and ecosystem were very academic - it was just programming. You always used the tools and libraries that were carefully crafted and stable. When it came to things that had the slightest risk of misusing something, it was always clearly emphasized how to not make an insecure thing. At best people linked to academic papers on input validation and even how to structure HTML properly in a best effort prevent browser parsing bugs or JavaScript bugs.
 
 Frameworks did a lot of magic JavaScript. You used the framework's own classes to render things on the page and it magically rendered all kinds of baked-in form validators and all kinds of things, so you wouldn't have to. If you wanted to AJAX something yourself, that was _rad_. You'd make an endpoint using your fancy-ass framework and it might render HTML directly and your jQuery or whatever would paste that HTML onto the page. Cool as fuck. Someone crazy might have used just JSON responses and jQueried something into the page and they would be asked: "Why would you do this? Just let the _application_ render what you wanted."
 
@@ -27,13 +28,13 @@ I love progress and I _LOVE_ the Web 3.0 or whatever it is we now have with SPAs
 
 On paper I might sound bitter. No, ofcourse not. I am a professional and I do what I must. But in hindsight I do believe the people who came up with Node.js and those who were major players in the new ecosystem should have standardized a _lot_ of things. I was very disappointed in the io.js drama. Afterall, we all simply serve our customers and clients, and when starting a new project there should not be any ambiguity on how long your technology stack will survive before being deprecated in the name of pretentious progress. Maybe the enthusiasm would die down a bit if we had some way of measuring how much money is lost globally in unnecessary work caused by another broken piece in the gearworks. Long live left-pad.
 
-Now coding, for fun: 
+Now coding, for fun:
 
 - A tiny React app for a "Friday bottle raffle"
 - A work-hours punch robot with a React interaface (an Electron-based Nightmare.js task runner)
 - Figuring out how to Reactize a Wordpress blog
 
-Now coding, for work: 
+Now coding, for work:
 
 - Maintaining an PHP MVC-app (Yii Framework)
 - Developing a theme for a Wordpress site
