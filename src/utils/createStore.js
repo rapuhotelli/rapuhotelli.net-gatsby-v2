@@ -6,10 +6,14 @@ const initialState = {
   filter: 'all',
 }
 
-const createStore = () =>
-  reduxCreateStore(
+const createStore = () => {
+  if (typeof window === 'undefined') {
+    return reduxCreateStore(reducers, initialState)
+  }
+  return reduxCreateStore(
     reducers,
     initialState,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
+}
 export default createStore

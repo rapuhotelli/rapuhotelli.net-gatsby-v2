@@ -13,7 +13,7 @@ body {
 
 figure {
   margin-bottom: 1.45rem;
-  padding: 1rem;
+  padding: 1rem !important;
   border: 1px solid #c4c4c4;
 }
 
