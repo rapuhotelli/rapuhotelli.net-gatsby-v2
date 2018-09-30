@@ -132,7 +132,6 @@ export default ({ children }) => (
 class Sidebar extends React.Component {
   constructor(props) {
     super(props)
-    console.log(props)
     this.props = props
   }
 

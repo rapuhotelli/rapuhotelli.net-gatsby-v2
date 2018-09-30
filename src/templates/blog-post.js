@@ -22,6 +22,10 @@ class BlogPostTemplate extends React.Component {
     if (!post) {
       post = get(this.props, 'allMarkdownRemark.edges[0].node')
     }
+    const location = get(
+      this,
+      'props.data.allMarkdownRemark.edges[0].node.fields.slug'
+    )
     const siteTitle = get(
       this.props,
       'data.site.siteMetadata.title',
@@ -66,7 +70,14 @@ class BlogPostTemplate extends React.Component {
     )
 
     if (this.props.isFrontPage) return postContent
-    return <Layout>{postContent}</Layout>
+    return (
+      <Layout location={location}>
+        <Helmet>
+          <title>{post.frontmatter.title}</title>
+        </Helmet>
+        {postContent}
+      </Layout>
+    )
   }
 }
 

@@ -11,9 +11,13 @@ class BlogIndex extends React.Component {
   render() {
     //const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     //const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const location = get(
+      this,
+      'props.data.allMarkdownRemark.edges[0].node.fields.slug'
+    )
     const data = get(this, 'props.data')
     return (
-      <Layout>
+      <Layout location={location}>
         <h2 style={{ borderBottom: `5px solid ${colors.orange}` }}>
           Latest post
         </h2>

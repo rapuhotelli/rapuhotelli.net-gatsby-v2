@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 // import { Container } from 'react-responsive-grid'
 import get from 'lodash/get'
 import Header from '../components/Header'
@@ -8,7 +9,7 @@ import { rhythm, scale } from '../utils/typography'
 import debounce from 'lodash/debounce'
 import styled from 'styled-components'
 // import Expanded from '../components/Expanded'
-import { Link } from 'gatsby'
+import { Link, graphql, StaticQuery } from 'gatsby'
 
 import './layout.css'
 
@@ -37,7 +38,26 @@ const Layout = styled.div`
   }
 `
 
-export default class Template extends React.Component {
+export default ({ location, children }) => (
+  <StaticQuery
+    query={graphql`
+      query LayoutQuery {
+        site {
+          siteMetadata {
+            title
+            description
+            siteUrl
+          }
+        }
+      }
+    `}
+    render={data => {
+      return <Template data={data} children={children} location={location} />
+    }}
+  />
+)
+
+class Template extends React.Component {
   constructor(props) {
     super(props)
     this.onResize = this.onResize.bind(this)
@@ -62,21 +82,31 @@ export default class Template extends React.Component {
   render() {
     const { location, children } = this.props
     const metaData = get(this, 'props.data.site.siteMetadata')
+    //const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    //const newestSlug = get(posts[0], 'node.fields.slug')
     /*
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
-    const series = get(this, 'props.data.allMarkdownRemark.series')
-    const newestSlug = get(posts[0], 'node.fields.slug')
     const currentSlug =
       location.pathname === '/' ? newestSlug : location.pathname
+    const series = get(this, 'props.data.allMarkdownRemark.series')
     */
     let rootPath = `/`
     if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
       rootPath = __PATH_PREFIX__ + `/`
     }
     //<Expanded />
-
+    console.log(metaData)
+    console.log(this.props.data.site.siteMetadata)
     return (
       <Layout>
+        <Helmet
+          defaultTitle={`${metaData.title}.net`}
+          titleTemplate={`%s | ${metaData.title}.net`}
+        >
+          <meta name="og:type" content="website" />
+          <meta name="og:site_name" content={`${metaData.title}`} />
+          <link rel="canonical" href={`${metaData.siteUrl}${location}`} />
+          <html lang="en" />
+        </Helmet>
         <Header />
         <Sidebar />
         <div style={{ padding: '0 1rem 1rem 1rem' }}>{children}</div>

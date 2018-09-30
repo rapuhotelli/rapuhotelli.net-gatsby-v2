@@ -63,7 +63,7 @@ class Header extends React.Component {
 export default ({ children }) => (
   <StaticQuery
     query={graphql`
-      query LayoutQuery {
+      query HeaderQuery {
         site {
           siteMetadata {
             title

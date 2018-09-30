@@ -3,7 +3,7 @@ module.exports = {
     title: 'rapuhotelli',
     author: 'rapuhotelli',
     description: 'a strange diary and some stories for another time',
-    siteUrl: 'rapuhotelli.net',
+    siteUrl: 'http://rapuhotelli.net',
   },
   pathPrefix: '/',
   plugins: [
@@ -33,7 +33,7 @@ module.exports = {
               maxWidth: 655,
               showCaptions: true,
               linkImagesToOriginal: false,
-              quality: 90,
+              quality: 80,
             },
           },
           {

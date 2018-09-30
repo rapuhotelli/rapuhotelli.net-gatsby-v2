@@ -4,7 +4,7 @@ series: ["pub philosophy", "gallery", "english"]
 title: "A Summer Story: Episode 2018"
 ---
 
-I don't have any photos of anyone in my home as family was never very significant, but I _have_ been blessed with delightful friends and colleagues who make life worthwhile. I am that obnoxious dude at the other end of the table taking those awkward photos, making people cringe in unison. Something to remember these special moments by.
+I have been blessed with delightful friends and colleagues who make life worthwhile. In turn, I am that obnoxious dude at the other end of the table taking those awkward photos, making people cringe in unison. Something to remember these special moments by.
 
 # May
 
