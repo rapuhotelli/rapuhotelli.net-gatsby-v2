@@ -1,3 +1,7 @@
+import wrapWithProvider from "./provider-wrapper"
+export const wrapRootElement = wrapWithProvider
+
+/*
 import React from 'react'
 import { Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
@@ -15,3 +19,4 @@ export const replaceRouterComponent = ({ history }) => {
 
   return ConnectedRouterWrapper
 }
+*/

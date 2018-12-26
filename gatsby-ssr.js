@@ -1,3 +1,9 @@
+import wrapWithProvider from "./provider-wrapper"
+
+import { renderToString } from 'react-dom/server'
+export const wrapRootElement = wrapWithProvider
+
+/*
 import React from 'react'
 import { Provider } from 'react-redux'
 import { renderToString } from 'react-dom/server'
@@ -22,3 +28,4 @@ export const replaceRenderer = ({
   replaceBodyHTMLString(bodyHTML)
   setHeadComponents(styleElement)
 }
+*/
