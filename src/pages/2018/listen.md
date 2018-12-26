@@ -1,5 +1,5 @@
 ---
-date: "2018-01-10T12:00:00+02:00"
+date: "2018-10-01T02:00:00+02:00"
 series: ["pub philosophy", "english"]
 title: "Listening in a mobile age"
 ---
