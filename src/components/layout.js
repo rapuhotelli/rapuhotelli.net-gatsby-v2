@@ -94,8 +94,6 @@ class Template extends React.Component {
       rootPath = __PATH_PREFIX__ + `/`
     }
     //<Expanded />
-    console.log(metaData)
-    console.log(this.props.data.site.siteMetadata)
     return (
       <Layout>
         <Helmet
@@ -104,6 +102,7 @@ class Template extends React.Component {
         >
           <meta name="og:type" content="website" />
           <meta name="og:site_name" content={`${metaData.title}`} />
+          <meta name="og:description" content={`${metaData.description}`} />
           <link rel="canonical" href={`${metaData.siteUrl}${location}`} />
           <html lang="en" />
         </Helmet>

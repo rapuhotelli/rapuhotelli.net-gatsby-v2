@@ -73,6 +73,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={location}>
         <Helmet>
+          <meta name="og:description" content={`${post.excerpt}`} />
           <title>{post.frontmatter.title}</title>
         </Helmet>
         {postContent}
@@ -128,7 +129,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
-
+      excerpt
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

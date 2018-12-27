@@ -8,6 +8,9 @@ module.exports = {
   pathPrefix: '/',
   plugins: [
     {
+      resolve: `gatsby-plugin-styled-components`,
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
