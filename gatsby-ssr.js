@@ -4,7 +4,7 @@ import { renderToString } from "react-dom/server"
 import { ServerStyleSheet, StyleSheetManager } from "styled-components"
 import createStore from "./src/utils/createStore"
 
-import Helmet from "react-helmet"
+import Helmet, { HelmetProvider } from "react-helmet-async"
 /*
 export const onRenderBody = (
   { setHeadComponents, setHtmlAttributes, setBodyAttributes },
@@ -23,6 +23,8 @@ export const onRenderBody = (
   ])
 }
 */
+const store = createStore()
+  
 export const replaceRenderer = ({
   bodyComponent,
   replaceBodyHTMLString,
@@ -31,20 +33,27 @@ export const replaceRenderer = ({
   setBodyAttributes
 }) => {
   const sheet = new ServerStyleSheet()
-  const store = createStore()
+  const helmetContext = {}
 
-  const helmet = Helmet.renderStatic()
+  // const helmet = Helmet.renderStatic()
+  
+
+  const app = (
+    <HelmetProvider context={helmetContext}>
+      <Provider store={store}>
+        <StyleSheetManager sheet={sheet.instance}>
+          {bodyComponent}
+        </StyleSheetManager>
+      </Provider>
+    </HelmetProvider>
+  )
+  replaceBodyHTMLString(renderToString(app))
+  
+  const { helmet } = helmetContext;
+  
   setHtmlAttributes(helmet.htmlAttributes.toComponent())
   setBodyAttributes(helmet.bodyAttributes.toComponent())
-
-  const app = () => (
-    <Provider store={store}>
-      <StyleSheetManager sheet={sheet.instance}>
-        {bodyComponent}
-      </StyleSheetManager>
-    </Provider>
-  )
-  replaceBodyHTMLString(renderToString(<app />))
+  
   setHeadComponents([
     sheet.getStyleElement(),
     helmet.title.toComponent(),

@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import Helmet from 'react-helmet-async';
 // import { Container } from 'react-responsive-grid'
 import get from 'lodash/get'
 import Header from '../components/Header'
@@ -95,22 +95,22 @@ class Template extends React.Component {
     }
     //<Expanded />
     return (
-      <Layout>
-        <Helmet
-          defaultTitle={`${metaData.title}.net`}
-          titleTemplate={`%s | ${metaData.title}.net`}
-        >
-          <meta name="og:type" content="website" />
-          <meta name="og:site_name" content={`${metaData.title}`} />
-          <meta name="og:description" content={`${metaData.description}`} />
-          <link rel="canonical" href={`${metaData.siteUrl}${location}`} />
-          <html lang="en" />
-        </Helmet>
-        <Header />
-        <Sidebar />
-        <div style={{ padding: '0 1rem 1rem 1rem' }}>{children}</div>
-        <Footer />
-      </Layout>
+        <Layout>
+          <Helmet
+            defaultTitle={`${metaData.title}.net`}
+            titleTemplate={`%s | ${metaData.title}.net`}
+          >
+            <meta name="og:type" content="website" />
+            <meta name="og:site_name" content={`${metaData.title}`} />
+            <meta name="og:description" content={`${metaData.description}`} />
+            <link rel="canonical" href={`${metaData.siteUrl}${location}`} />
+            <html lang="en" />
+          </Helmet>
+          <Header />
+          <Sidebar />
+          <div style={{ padding: '0 1rem 1rem 1rem' }}>{children}</div>
+          <Footer />
+        </Layout>
     )
   }
 }
