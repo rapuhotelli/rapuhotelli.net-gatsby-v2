@@ -5,24 +5,7 @@ import { ServerStyleSheet, StyleSheetManager } from "styled-components"
 import createStore from "./src/utils/createStore"
 
 import Helmet, { HelmetProvider } from "react-helmet-async"
-/*
-export const onRenderBody = (
-  { setHeadComponents, setHtmlAttributes, setBodyAttributes },
-  pluginOptions
-) => {
-  const helmet = Helmet.renderStatic()
-  setHtmlAttributes(helmet.htmlAttributes.toComponent())
-  setBodyAttributes(helmet.bodyAttributes.toComponent())
-  setHeadComponents([
-    helmet.title.toComponent(),
-    helmet.link.toComponent(),
-    helmet.meta.toComponent(),
-    helmet.noscript.toComponent(),
-    helmet.script.toComponent(),
-    helmet.style.toComponent(),
-  ])
-}
-*/
+
 const store = createStore()
   
 export const replaceRenderer = ({
