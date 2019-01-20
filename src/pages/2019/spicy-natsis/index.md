@@ -37,14 +37,19 @@ When the sugar begins to melt, quickly add a spoonful of honey and stir. _Immedi
 
 Once you have a satisfying semisolid chunk of slimy nuts, spread them on the baking tray. Try to lay them out as evenly as you can. You will not succeed, but try anyway. Then send the slimy nuts to the oven.
 
+<figure>
+    <img src="./natsis1.jpg">
+    <figcaption>Sugar plus nuts equals tray in oven.</figcaption>
+</figure>
+
 In 10-15 minutes some of the nuts begin to have a darker tint to them. That is your sign to take them out. _Don't touch the nuts with your bare hands immediately after._ The sugar is very hot and will stick to your fingers and will just burn your soul while you scream. 
 
 Your goal is to separate all the nuts from each other in as high temperature as possible without burning your hands. If the nuts get to room temperature, the Spice mixture will not stick and your nuts will be lame. 
 
-- If you have some comfortable silicone gloves – great!
+- If you have some comfortable heat resistant kitchen gloves – great!
 - If not, let the nuts cool down on the tray for ~15 minutes, and _carefully_ try out the temperature with your hands while having cold water ready for your hands if they are still too hot. 
 
-Once the nuts are separated, send them all into the bag with the Spice and shake! Then filter the nuts with a sieve, let them cool to room temperature and serve. Sprinkle some Spice on top of your serving.
+Once the nuts are separated, send them all into the bag with the Spice and shake! Filter the nuts with a sieve, let them cool to room temperature and serve. Sprinkle some Spice on top of your serving.
 
 
  
